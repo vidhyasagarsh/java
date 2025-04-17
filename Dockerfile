@@ -1,11 +1,11 @@
-# Use an OpenJDK base image
+# Use OpenJDK base image
 FROM openjdk:17-jdk-slim
 
-# Set the working directory
+# Set working directory
 WORKDIR /app
 
-# Copy your JAR file into the container
-COPY java.jar /app/java.jar
+# Copy jar file into the image
+COPY java.jar java.jar
 
-# Run the JAR file
-CMD ["java", "-jar", "/app/java.jar"]
+# Run the jar file
+CMD ["java", "-jar", "java.jar"]
